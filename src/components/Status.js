@@ -5,9 +5,11 @@ export default function Status() {
   const isAuthenticated = useContext(AuthenticationContext);
   return (
     <div>
-     <p className="authText">
-        {isAuthenticated ? 'You are now authenticated, you can proceed' : 'You are not authenticated'}
-      </p>
+     {isAuthenticated ? (
+        <p className="authText">You are now authenticated, you can proceed</p>
+      ) : (
+        <p className="authText">you are not authenticated</p>
+      )}
     </div>
   );
 }
