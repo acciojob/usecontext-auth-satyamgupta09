@@ -4,7 +4,7 @@ export const AuthenticationContext = createContext();
 
 export default function AuthContext() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  handleChange = (e) => {
+  const handleChange = (e) => {
     console.log(e.target.checked);
     setIsAuthenticated(e.target.checked);
   };
